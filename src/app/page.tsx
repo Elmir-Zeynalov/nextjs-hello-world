@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { type SanityDocument } from "next-sanity";
 
-
-
 import { client } from "../sanity/client";
-
 
 const PLANTS_QUERY = `*[_type == "plant"]{
   _id,
@@ -53,7 +50,6 @@ export default async function IndexPage() {
     </li>
   ))}
 </ul>
-
 
 
     </main>
