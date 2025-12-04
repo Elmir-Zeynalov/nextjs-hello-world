@@ -2,19 +2,6 @@ import Link from 'next/link'
 import { type SanityDocument } from 'next-sanity'
 import { client } from '../../sanity/client'
 
-//const PLANTS_QUERY = `*[_type == "plant"]{
-//   _id,
-//   name,
-//   slug,
-//   description,
-//   "imageUrl": image.asset->url,
-//   careGuide->{
-//     title,
-//     watering,
-//     sunlight
-//   }
-// }`
-
 const PLANTS_QUERY = `*[_type == "plant" && defined(slug.current)]{
   _id,
   name,
