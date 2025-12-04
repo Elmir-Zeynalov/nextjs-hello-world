@@ -5,6 +5,7 @@ import { client } from '../../sanity/client'
 const PLANTS_QUERY = `*[_type == "plant"]{
   _id,
   name,
+  slug,
   description,
   "imageUrl": image.asset->url,
   careGuide->{
@@ -13,6 +14,7 @@ const PLANTS_QUERY = `*[_type == "plant"]{
     sunlight
   }
 }`
+
 const options = { next: { revalidate: 30 } }
 
 export default async function IndexPage() {
