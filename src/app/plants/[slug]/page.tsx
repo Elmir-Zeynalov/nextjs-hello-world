@@ -61,16 +61,29 @@ const portableTextComponents: PortableTextComponents = {
   },
   types: {
     factBox: ({ value }) => (
-      <aside className="mt-4 rounded-xl border border-yellow-600/40 bg-yellow-900/30 p-3 text-sm text-yellow-100">
+      <aside className="mt-4 mb-4 border-l-4 border-yellow-400 bg-black/30 p-3">
         {value.title && (
           <h3 className="mb-1 text-xs font-semibold tracking-wide text-yellow-300 uppercase">
             {value.title}
           </h3>
         )}
-        {value.body && <p className="text-xs leading-relaxed">{value.body}</p>}
+        {value.body && <p className="text-sm leading-snug text-yellow-100/90">{value.body}</p>}
       </aside>
     ),
   },
+
+  //   types: {
+  //     factBox: ({ value }) => (
+  //       <aside className="mt-4 rounded-xl border border-yellow-600/40 bg-yellow-900/30 p-3 text-sm text-yellow-100">
+  //         {value.title && (
+  //           <h3 className="mb-1 text-xs font-semibold tracking-wide text-yellow-300 uppercase">
+  //             {value.title}
+  //           </h3>
+  //         )}
+  //         {value.body && <p className="text-xs leading-relaxed">{value.body}</p>}
+  //       </aside>
+  //     ),
+  //   },
 }
 
 export default async function PlantPage({ params }: PlantPageProps) {
